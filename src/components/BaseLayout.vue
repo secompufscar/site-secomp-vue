@@ -1,12 +1,12 @@
 <template>
   <div class="wrapper">
-    <header class="header">
+    <header>
       <slot name="header"></slot>
     </header>
     <main>
       <slot></slot>
     </main>
-    <footer class="footer pt-4">
+    <footer class="footer mt-5 pt-4">
       <slot name="footer"></slot>
     </footer>
   </div>
@@ -16,7 +16,6 @@
 .wrapper {
   height: 100%;
   display: grid;
-  grid-template-areas: "header" "main" "footer";
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 4.5rem 1fr auto;
 }
 </style>

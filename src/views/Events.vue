@@ -5,10 +5,10 @@
     </template>
     <template #default>
       <b-container>
-        <h2>Próximos Eventos</h2>
+        <h2>Eventos</h2>
         <b-row>
           <EventoCard
-            v-for="event in nextEvents"
+            v-for="event in events"
             :key="event.id"
             :title="event.title"
             :date-time="event.dateTime"
@@ -29,22 +29,19 @@ import BaseLayout from '@/components/BaseLayout.vue';
 import NavBar from '@/components/NavBar.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import EventoCard from '@/components/EventoCard.vue';
-import { nextEvents } from '@/utils/dummy-data';
+import { events } from '@/utils/dummy-data';
 
 export default Vue.extend({
-  components: {
-    BaseLayout,
-    EventoCard,
-    NavBar,
-    TheFooter,
-  },
   data() {
     return {
-      nextEvents,
+      events,
     };
+  },
+  components: {
+    BaseLayout,
+    NavBar,
+    TheFooter,
+    EventoCard,
   },
 });
 </script>
-
-<style>
-</style>

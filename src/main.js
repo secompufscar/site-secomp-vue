@@ -28,7 +28,6 @@ library.add(faYoutube);
 library.add(faTwitter);
 library.add(faFacebookF);
 library.add(faInstagram);
-console.log(library);
 
 Vue.config.productionTip = false;
 
