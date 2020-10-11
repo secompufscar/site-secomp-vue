@@ -6,7 +6,8 @@
     <template #default>
       <b-container>
         <h2>Próximos Eventos</h2>
-        <b-row>
+        <p v-if="loading">Loading...</p>
+        <b-row v-if="!loading">
           <EventoCard
             v-for="event in nextEvents"
             :key="event.id"
@@ -29,19 +30,34 @@ import BaseLayout from '@/components/BaseLayout.vue';
 import NavBar from '@/components/NavBar.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import EventoCard from '@/components/EventoCard.vue';
-import { nextEvents } from '@/utils/dummy-data';
+import { getNextEvents } from '@/services/events-service';
 
 export default Vue.extend({
+  data() {
+    return {
+      loading: false,
+      error: '',
+      nextEvents: [],
+    };
+  },
+  created() {
+    this.loading = true;
+    getNextEvents()
+      .then((events) => {
+        this.nextEvents = events;
+      })
+      .catch((error) => {
+        this.error = error;
+      })
+      .finally(() => {
+        this.loading = false;
+      });
+  },
   components: {
     BaseLayout,
     EventoCard,
     NavBar,
     TheFooter,
-  },
-  data() {
-    return {
-      nextEvents,
-    };
   },
 });
 </script>
