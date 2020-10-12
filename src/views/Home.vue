@@ -1,9 +1,14 @@
 <template>
   <BaseLayout>
     <template #default>
-      <b-container>
+      <b-container class="h-100">
         <h2>Próximos Eventos</h2>
-        <p v-if="loading">Loading...</p>
+        <div
+          v-if="loading"
+          class="d-flex justify-content-center align-items-center h-100"
+        >
+          Loading...
+        </div>
         <b-row v-if="!loading">
           <EventoCard
             v-for="event in nextEvents"
