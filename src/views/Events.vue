@@ -3,12 +3,12 @@
     <template #default>
       <b-container class="h-100">
         <h2>Eventos</h2>
-        <div
-          v-if="loading"
-          class="d-flex justify-content-center align-items-center h-100"
-        >
-          Loading...
-        </div>
+        <b-row v-if="loading">
+          <SkeletonLoader
+            v-for="i in perPage"
+            :key="i"
+          />
+        </b-row>
         <div v-if="!loading && hasEvents">
           <b-row v-if="!loading">
             <EventoCard
@@ -43,11 +43,13 @@ import Vue from 'vue';
 import BaseLayout from '@/components/BaseLayout.vue';
 import EventoCard from '@/components/EventoCard.vue';
 import { getCount, getEvents } from '@/services/events-service';
+import SkeletonLoader from '@/components/SkeletonLoader.vue';
 
 export default Vue.extend({
   components: {
     BaseLayout,
     EventoCard,
+    SkeletonLoader,
   },
   data() {
     return {
@@ -56,7 +58,7 @@ export default Vue.extend({
       events: [],
       page: this.$route.params.page || 0,
       count: 0,
-      perPage: 4,
+      perPage: 6,
     };
   },
   computed: {

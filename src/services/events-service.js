@@ -4,7 +4,7 @@ export const getEvents = (page = 0, limit = 3) => new Promise((resolve) => {
   const start = page * limit;
   const end = start + limit;
   const result = events.slice(start, end);
-  setTimeout(() => resolve(result), 500);
+  setTimeout(() => resolve(result), 2000);
 });
 
 export const getNextEvents = (limit = 4) => new Promise((resolve) => {
