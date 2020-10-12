@@ -1,16 +1,32 @@
 <template>
   <div class="wrapper">
     <header>
-      <slot name="header"></slot>
+      <slot name="header">
+        <NavBar />
+      </slot>
     </header>
     <main>
       <slot></slot>
     </main>
     <footer class="footer mt-5 pt-4">
-      <slot name="footer"></slot>
+      <slot name="footer">
+        <TheFooter/>
+      </slot>
     </footer>
   </div>
 </template>
+
+<script>
+import TheFooter from '@/components/TheFooter.vue';
+import NavBar from '@/components/NavBar.vue';
+
+export default {
+  components: {
+    NavBar,
+    TheFooter,
+  },
+};
+</script>
 
 <style>
 .wrapper {
