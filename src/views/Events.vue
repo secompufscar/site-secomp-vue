@@ -56,7 +56,7 @@ export default Vue.extend({
       loading: false,
       error: '',
       events: [],
-      page: this.$route.params.page || 0,
+      page: this.$route.query.page || 0,
       count: 0,
       perPage: 6,
     };
@@ -68,7 +68,7 @@ export default Vue.extend({
   },
   watch: {
     $route(to) {
-      this.page = to.params.page || 0;
+      this.page = to.query.page || 0;
       getEvents(this.page, this.perPage)
         .then((events) => {
           this.events = events;
@@ -96,7 +96,7 @@ export default Vue.extend({
   },
   methods: {
     goToPage(page) {
-      this.$router.push(`/events/${page - 1}`);
+      this.$router.push(`/events?page=${page - 1}`);
     },
   },
 });

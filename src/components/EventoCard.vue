@@ -1,11 +1,15 @@
 <template>
   <b-col cols="12" lg="6">
     <b-card
-      :title="title"
       :sub-title="dateFormatted"
       tag="article"
       class="mb-2"
     >
+      <b-card-title>
+        <router-link to="/events/1">
+          {{ title }}
+        </router-link>
+      </b-card-title>
       <b-card-text>
         {{ content }}
       </b-card-text>
