@@ -8,6 +8,7 @@
           <EventoCard
             v-for="event in events"
             :key="event.id"
+            :id="event.id"
             :title="event.title"
             :date-time="event.dateTime"
             :content="event.content"
@@ -36,7 +37,7 @@ export default Vue.extend({
     this.loading = true;
     getEvents()
       .then((events) => {
-        this.events = events;
+        this.events = events.sort((a, b) => a.dateTime - b.dateTime);
       })
       .catch((error) => {
         this.error = error;
