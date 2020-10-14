@@ -4,7 +4,10 @@
       <b-container class="h-100">
         <h2>Próximos Eventos</h2>
         <b-row v-if="loading">
-          <SkeletonLoader v-for="i in  4" :key="i"/>
+          <SkeletonLoader
+            v-for="i in  4"
+            :key="i"
+            :loading="loading"/>
         </b-row>
         <b-row v-if="!loading">
           <EventoCard

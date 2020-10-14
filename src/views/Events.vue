@@ -7,6 +7,7 @@
           <SkeletonLoader
             v-for="i in perPage"
             :key="i"
+            :loading="loading"
           />
         </b-row>
         <div v-if="!loading && hasEvents">
