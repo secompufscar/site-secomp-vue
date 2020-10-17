@@ -2,6 +2,7 @@
   <BaseLayout>
     <template #default>
       <b-container>
+        <carousel/>
         <h2>Próximos Eventos</h2>
         <p v-if="loading">Loading...</p>
         <b-row v-if="!loading">
@@ -22,6 +23,7 @@
 import Vue from 'vue';
 import BaseLayout from '@/components/BaseLayout.vue';
 import EventoCard from '@/components/EventoCard.vue';
+import CarouselComponent from '@/components/Carousel.vue';
 import { getNextEvents } from '@/services/events-service';
 
 export default Vue.extend({
@@ -48,9 +50,11 @@ export default Vue.extend({
   components: {
     BaseLayout,
     EventoCard,
+    carousel: CarouselComponent,
   },
 });
 </script>
 
-<style>
+<style scoped>
+
 </style>
