@@ -4,7 +4,12 @@
       <b-container>
         <carousel/>
         <h2>Próximos Eventos</h2>
-        <p v-if="loading">Loading...</p>
+        <b-row v-if="loading">
+          <SkeletonLoader
+            v-for="i in  4"
+            :key="i"
+            :loading="loading"/>
+        </b-row>
         <b-row v-if="!loading">
           <EventoCard
             v-for="event in nextEvents"
@@ -25,8 +30,14 @@ import BaseLayout from '@/components/BaseLayout.vue';
 import EventoCard from '@/components/EventoCard.vue';
 import CarouselComponent from '@/components/Carousel.vue';
 import { getNextEvents } from '@/services/events-service';
+import SkeletonLoader from '@/components/SkeletonLoader.vue';
 
 export default Vue.extend({
+  components: {
+    BaseLayout,
+    EventoCard,
+    SkeletonLoader,
+  },
   data() {
     return {
       loading: false,
