@@ -10,7 +10,7 @@
         {{ dateFormatted }}
       </b-card-sub-title>
       <b-card-text>
-        {{ content }}
+        {{ headline }}
       </b-card-text>
       <b-button :pressed="false" :to="linkTo" variant="info">Veja mais</b-button>
     </b-card>
@@ -35,7 +35,7 @@ export default {
       type: Date,
       required: true,
     },
-    content: {
+    headline: {
       type: String,
       required: true,
     },

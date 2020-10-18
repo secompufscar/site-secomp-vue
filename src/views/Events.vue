@@ -11,7 +11,7 @@
             :id="event.id"
             :title="event.title"
             :date-time="event.dateTime"
-            :content="event.content"
+            :headline="event.headline"
           />
         </b-row>
       </b-container>

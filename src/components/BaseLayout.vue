@@ -10,20 +10,20 @@
     </main>
     <footer class="footer mt-5 pt-4">
       <slot name="footer">
-        <Footer/>
+        <InfoFooter/>
       </slot>
     </footer>
   </div>
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue';
+import InfoFooter from '@/components/InfoFooter.vue';
 import NavBar from '@/components/NavBar.vue';
 
 export default {
   components: {
     NavBar,
-    Footer,
+    InfoFooter,
   },
 };
 </script>
