@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'SocialButton',
+  name: "SocialButton",
   props: {
     link: {
       type: String,

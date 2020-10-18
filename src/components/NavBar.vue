@@ -1,7 +1,12 @@
 <template>
-  <b-navbar class="shadow-sm bg-gradient-secomp" fixed="top" type="dark" toggleable="lg">
-    <b-navbar-brand :to="{name: 'Home'}" href="#">
-      <img id="logo" src="../assets/logo.png" alt="Logo da SECOMP UFSCar"/>
+  <b-navbar
+    class="shadow-sm bg-gradient-secomp"
+    fixed="top"
+    type="dark"
+    toggleable="lg"
+  >
+    <b-navbar-brand :to="{ name: 'Home' }" href="#">
+      <img id="logo" src="../assets/logo.png" alt="Logo da SECOMP UFSCar" />
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

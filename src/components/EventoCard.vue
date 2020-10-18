@@ -12,16 +12,18 @@
       <b-card-text>
         {{ content }}
       </b-card-text>
-      <b-button :pressed="false" :to="linkTo" variant="info">Veja mais</b-button>
+      <b-button :pressed="false" :to="linkTo" variant="info"
+        >Veja mais</b-button
+      >
     </b-card>
   </b-col>
 </template>
 
 <script>
-import formatDate from '@/utils/date-format';
+import formatDate from "@/utils/date-format";
 
 export default {
-  name: 'EventoCard',
+  name: "EventoCard",
   props: {
     id: {
       type: Number,
@@ -46,7 +48,7 @@ export default {
     },
     linkTo() {
       return {
-        name: 'Event',
+        name: "Event",
         params: { eventid: this.id },
       };
     },
@@ -56,6 +58,6 @@ export default {
 
 <style scoped>
 .title-link {
-  color:#212529;
+  color: #212529;
 }
 </style>

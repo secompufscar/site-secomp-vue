@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import BaseLayout from '@/components/BaseLayout.vue';
-import { getEvent } from '@/services/events-service';
+import Vue from "vue";
+import BaseLayout from "@/components/BaseLayout.vue";
+import { getEvent } from "@/services/events-service";
 
 export default Vue.extend({
   props: {
@@ -23,8 +23,8 @@ export default Vue.extend({
   },
   data() {
     return {
-      title: '',
-      error: '',
+      title: "",
+      error: "",
       event: {},
       loading: true,
     };

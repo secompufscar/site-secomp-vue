@@ -19,16 +19,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import BaseLayout from '@/components/BaseLayout.vue';
-import EventoCard from '@/components/EventoCard.vue';
-import { getNextEvents } from '@/services/events-service';
+import Vue from "vue";
+import BaseLayout from "@/components/BaseLayout.vue";
+import EventoCard from "@/components/EventoCard.vue";
+import { getNextEvents } from "@/services/events-service";
 
 export default Vue.extend({
   data() {
     return {
       loading: false,
-      error: '',
+      error: "",
       nextEvents: [],
     };
   },
