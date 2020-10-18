@@ -1,3 +1,5 @@
+export const eventsEmpty = [];
+
 export const events = [
   {
     id: 0,
@@ -37,7 +39,3 @@ export const events = [
     headline: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.\n',
   },
 ];
-
-export const prevEvents = events.filter((event) => event.dateTime.getTime() < Date.now());
-
-export const nextEvents = events.filter((event) => event.dateTime.getTime() >= Date.now());
