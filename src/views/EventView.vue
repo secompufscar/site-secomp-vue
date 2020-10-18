@@ -14,11 +14,17 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import Vue from 'vue';
 import VueMarkdown from 'vue-markdown-render';
 import BaseLayout from '@/components/BaseLayout.vue';
 import formatDate from '@/utils/date-format';
 import { getEvent } from '@/services/events-service';
+=======
+import Vue from "vue";
+import BaseLayout from "@/components/BaseLayout.vue";
+import { getEvent } from "@/services/events-service";
+>>>>>>> 3e804f3baec75fba9f6ca692591c3ab2e81e196d
 
 export default Vue.extend({
   props: {
@@ -28,8 +34,8 @@ export default Vue.extend({
   },
   data() {
     return {
-      title: '',
-      error: '',
+      title: "",
+      error: "",
       event: {},
       loading: true,
     };
