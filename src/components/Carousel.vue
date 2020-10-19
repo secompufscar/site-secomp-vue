@@ -1,7 +1,7 @@
 <template>
   <div id="carousel-component">
     <div class="notphone-hidden">
-      <b-carousel interval="3000" indicators>
+      <b-carousel :interval="3000" indicators>
         <b-carousel-slide
           v-for="event in events"
           :key="event.id"
@@ -33,7 +33,7 @@
       </b-carousel>
     </div>
     <div class="phone-hidden">
-      <b-carousel interval="3000" controls indicators>
+      <b-carousel :interval="3000" controls indicators>
         <b-carousel-slide
           v-for="event in events"
           :key="event.id"
