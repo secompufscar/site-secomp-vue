@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import {
-  BootstrapVue, CarouselPlugin, BadgePlugin, ButtonPlugin,
+  BootstrapVue,
 } from 'bootstrap-vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -34,9 +34,9 @@ library.add(faInstagram);
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
-Vue.use(CarouselPlugin);
-Vue.use(BadgePlugin);
-Vue.use(ButtonPlugin);
+// Vue.use(CarouselPlugin);
+// Vue.use(BadgePlugin);
+// Vue.use(ButtonPlugin);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

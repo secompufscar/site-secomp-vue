@@ -2,7 +2,7 @@
   <BaseLayout>
     <template #default>
       <b-container>
-        <carousel/>
+        <home-carousel/>
         <h2>Próximos Eventos</h2>
         <b-row v-if="loading">
           <SkeletonLoader
@@ -37,6 +37,7 @@ export default Vue.extend({
     BaseLayout,
     EventoCard,
     SkeletonLoader,
+    'home-carousel': CarouselComponent,
   },
   data() {
     return {
@@ -57,11 +58,6 @@ export default Vue.extend({
       .finally(() => {
         this.loading = false;
       });
-  },
-  components: {
-    BaseLayout,
-    EventoCard,
-    carousel: CarouselComponent,
   },
 });
 </script>
