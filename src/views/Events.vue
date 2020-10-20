@@ -15,7 +15,7 @@
             <EventoCard
               v-for="event in events"
               :key="event.id"
-              :id="evento.id"
+              :id="event.id"
               :title="event.title"
               :date-time="event.dateTime"
               :headline="event.headline"
@@ -56,7 +56,7 @@ export default Vue.extend({
   data() {
     return {
       loading: false,
-      error: "",
+      error: '',
       events: [],
       page: this.$route.query.page || 0,
       count: 0,

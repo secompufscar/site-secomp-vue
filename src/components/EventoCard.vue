@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import formatDate from "@/utils/date-format";
+import formatDate from '@/utils/date-format';
 
 export default {
-  name: "EventoCard",
+  name: 'EventoCard',
   props: {
     id: {
-      type: Number,
+      type: String,
       required: true,
     },
     title: {
@@ -48,7 +48,7 @@ export default {
     },
     linkTo() {
       return {
-        name: "Event",
+        name: 'Event',
         params: { eventid: this.id },
       };
     },

@@ -3,10 +3,13 @@
     <template #default>
       <b-container>
         <h2 v-if="loading">Loading...</h2>
-        <div v-if="!loading" class="content-loaded">
+        <div v-if="!loading && !error" class="content-loaded">
           <h2>{{ event.title }}</h2>
-          <h6 class="subtitle">Data: {{ event.dateTime }}</h6>
+          <h6 class="subtitle">Data: {{ formatDate(event.dateTime) }}</h6>
           <vue-markdown class="markdown" :source="event.content" />
+        </div>
+        <div v-if="!loading && error" class="error">
+          <h2>{{ error }}</h2>
         </div>
       </b-container>
     </template>
@@ -23,22 +26,28 @@ import { getEvent } from '@/services/events-service';
 export default Vue.extend({
   props: {
     eventid: {
+      type: String,
       required: true,
     },
   },
   data() {
     return {
-      title: "",
-      error: "",
-      event: {},
+      title: '',
+      error: '',
+      event: {
+        id: '',
+        title: '',
+        dateTime: '',
+        headline: '',
+        content: '',
+      },
       loading: true,
     };
   },
   mounted() {
-    getEvent(Number(this.eventid))
+    getEvent(this.eventid)
       .then((event) => {
         this.event = event;
-        this.event.dateTime = formatDate(this.dateTime);
       })
       .catch((error) => {
         this.error = error;
@@ -46,6 +55,9 @@ export default Vue.extend({
       .finally(() => {
         this.loading = false;
       });
+  },
+  methods: {
+    formatDate,
   },
   components: {
     BaseLayout,
