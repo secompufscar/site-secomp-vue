@@ -7,8 +7,8 @@
           <b-skeleton animation="fade" height="1.2rem" width="35%"></b-skeleton>
           <b-skeleton animation="fade" class=""></b-skeleton>
           <b-skeleton animation="fade" class=""></b-skeleton>
-          <b-skeleton animation="fade" class=""></b-skeleton><br>
-          <b-skeleton animation="fade" height="2.5rem" width="20%"></b-skeleton>
+          <b-skeleton animation="fade" class=""></b-skeleton>
+          <b-skeleton animation="fade" height="2.2rem" width="20%"></b-skeleton>
         </b-card>
       </template>
     </b-skeleton-wrapper>
