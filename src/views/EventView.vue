@@ -35,10 +35,8 @@ export default Vue.extend({
       title: '',
       error: '',
       event: {
-        id: '',
         title: '',
         dateTime: '',
-        headline: '',
         content: '',
       },
       loading: true,
