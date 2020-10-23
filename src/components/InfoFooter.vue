@@ -20,9 +20,7 @@
         </p>
       </b-col>
       <b-col sm="12" class="text-center">
-        <p>
-          Copyright &copy; SECOMP UFSCar
-        </p>
+        <p>Copyright &copy; SECOMP UFSCar</p>
       </b-col>
     </b-row>
   </b-container>
