@@ -1,7 +1,8 @@
 <template>
   <BaseLayout>
     <template #default>
-      <b-container class="h-100">
+      <b-container>
+        <home-carousel/>
         <h2>Próximos Eventos</h2>
         <b-row v-if="loading">
           <SkeletonLoader
@@ -28,6 +29,7 @@
 import Vue from 'vue';
 import BaseLayout from '@/components/BaseLayout.vue';
 import EventoCard from '@/components/EventoCard.vue';
+import CarouselComponent from '@/components/Carousel.vue';
 import { getNextEvents } from '@/services/events-service';
 import SkeletonLoader from '@/components/SkeletonLoader.vue';
 
@@ -36,6 +38,7 @@ export default Vue.extend({
     BaseLayout,
     EventoCard,
     SkeletonLoader,
+    'home-carousel': CarouselComponent,
   },
   data() {
     return {
@@ -60,5 +63,6 @@ export default Vue.extend({
 });
 </script>
 
-<style>
+<style scoped>
+
 </style>
