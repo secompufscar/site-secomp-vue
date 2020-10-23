@@ -2,7 +2,7 @@
   <div class="wrapper">
     <header>
       <slot name="header">
-        <NavBar />
+        <NavBar/>
       </slot>
     </header>
     <main>
@@ -10,20 +10,20 @@
     </main>
     <footer class="footer mt-5 pt-4">
       <slot name="footer">
-        <TheFooter/>
+        <InfoFooter/>
       </slot>
     </footer>
   </div>
 </template>
 
 <script>
-import TheFooter from '@/components/TheFooter.vue';
+import InfoFooter from '@/components/InfoFooter.vue';
 import NavBar from '@/components/NavBar.vue';
 
 export default {
   components: {
     NavBar,
-    TheFooter,
+    InfoFooter,
   },
 };
 </script>
