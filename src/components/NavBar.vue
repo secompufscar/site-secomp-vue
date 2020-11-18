@@ -16,6 +16,10 @@
           <font-awesome-icon icon="calendar-alt"></font-awesome-icon>
           Eventos
         </b-nav-item>
+        <b-nav-item exact-active-class="active" :to="{ name: 'Staff' }">
+          <font-awesome-icon icon="users"></font-awesome-icon>
+          Equipe
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

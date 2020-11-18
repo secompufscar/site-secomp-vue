@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faHome,
+  faUsers,
   faEnvelope,
   faMobileAlt,
   faCalendarAlt,
@@ -23,6 +24,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 library.add(faHome);
+library.add(faUsers);
 library.add(faEnvelope);
 library.add(faMobileAlt);
 library.add(faCalendarAlt);
